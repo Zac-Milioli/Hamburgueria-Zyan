@@ -32,3 +32,4 @@ class sys:
         os.system('clear')
         aux.comanda()
         input('Pressione ENTER para continuar')
+        print("BUNDA HAHAHA")

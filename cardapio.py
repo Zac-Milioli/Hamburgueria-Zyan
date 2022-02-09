@@ -1,10 +1,8 @@
 from produto import Produto
 
+class Cardapio:
+    def __init__(self, lista_prod):
+        self.lista_prod = []
 
-class Cardapio(Produto):
-    def __init__(self):
-        self.rede = []
-
-    def cadastrar(self):
-        self.rede.append(self.nome, self.preco, self.descricao)
-        return self.rede
+    def listar_pro (self):
+        self.lista_prod.append(self.rede )

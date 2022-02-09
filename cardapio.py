@@ -1,7 +1,10 @@
-class Cardapio:
-  def __init__(self, produto, preço):
-    self.produto = produto
-    self.preço = preço
+from produto import Produto
 
-  def get_preço(self):
 
+class Cardapio(Produto):
+    def __init__(self):
+        self.rede = []
+
+    def cadastrar(self):
+        self.rede.append(self.nome, self.preco, self.descricao)
+        return self.rede

@@ -8,7 +8,6 @@ class Mesa:
         """Retorna numero"""
         return self.__numero
 
-    @numero.setter
     def set_numero(self, numero):
         """Altera numero"""
         self.__numero = numero
@@ -19,9 +18,7 @@ class Mesa:
         """Retorna cliente"""
         return self.__cliente
 
-    @cliente.setter
     def set_cliente(self, cliente):
         """Altera cliente"""
         self.__cliente = cliente
         return self.__cliente
-    

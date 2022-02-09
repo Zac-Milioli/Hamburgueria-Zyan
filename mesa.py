@@ -1,7 +1,6 @@
 class Mesa:
-    def __init__(self, numero, cliente):
+    def __init__(self, numero):
         self.__numero = numero
-        self.__cliente = cliente
 
     @property
     def get_numero(self):
@@ -13,12 +12,6 @@ class Mesa:
         self.__numero = numero
         return self.__numero
 
-    @property
-    def get_cliente(self):
-        """Retorna cliente"""
-        return self.__cliente
-
-    def set_cliente(self, cliente):
-        """Altera cliente"""
-        self.__cliente = cliente
-        return self.__cliente
+    def __repr__(self):
+        """Retorna objeto em formato string"""
+        return f'Mesa: {self.__numero}'

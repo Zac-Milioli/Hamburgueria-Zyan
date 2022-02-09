@@ -25,4 +25,4 @@ class Cliente:
 
     def __repr__(self):
         """Retornar objeto em formato string"""
-        return(f'Cliente: {self.__nome}\nCódigo: {self.__cod}')
+        return f'Cliente: {self.__nome}\nCódigo: {self.__cod}'

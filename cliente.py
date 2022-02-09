@@ -22,3 +22,7 @@ class Cliente:
         """Altera cod"""
         self.__cod = cod
         return self.__cod
+
+    def __repr__(self):
+        """Retornar objeto em formato string"""
+        return(f'Cliente: {self.__nome}\nCódigo: {self.__cod}')

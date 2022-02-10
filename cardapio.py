@@ -1,12 +1,19 @@
 
-from produto import Produto
 class Cardapio:
     def __init__(self):
-        self.pro = []
+        self.produtos = []
+
+    def set_cardapio(self, cardapio):
+        self.produtos.append((cardapio))
+
+
+    def new_produto(self, produto):
+        self.produtos.append(produto)
+        print("Item adicionado com sucesso")
 
     def get_pro(self):
-        for i in self.pro:
-            print(i)
+        for produto in self.produtos:
+            print("Nome:",produto.nome,",Preço:", produto.preco, ",Descrição:",produto.descricao)
 
-    def new_pro (self, nome):
-        self.pro.append(nome)
+
+

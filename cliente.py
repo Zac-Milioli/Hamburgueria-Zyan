@@ -6,15 +6,10 @@ class Cliente:
 
     def alterar_cli (self, newcli):
         self.cli_nome = newcli
-        self.cli_nome = input("Novo Cliente: ")
-        r
 
     def alterar_preco (self, newcod):
         self.cli_cod = newcod
-        self.cli_cod = input("Novo Código: ")
 
 
     def alterar_des(self, newped):
         self.cli_ped = newped
-        self.cli_ped= input("Novo Pedido: ")
-

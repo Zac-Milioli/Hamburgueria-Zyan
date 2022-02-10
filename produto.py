@@ -1,3 +1,5 @@
+import json
+
 class Produto:
     def __init__(self, p_nome, descricao, valor):
         self.__p_nome = p_nome
@@ -33,3 +35,13 @@ class Produto:
         """Altera o valor"""
         self.__valor = valor
         return self.__valor
+
+    @property
+    def json(self):
+        x = {
+            "Produto: ": self.__p_nome,
+            "Descrição: ": self.__descricao,
+            "Valor: ": self.__valor
+        }
+        return json.dumps(x, indent=3, ensure_ascii=False, separators=('', ' '))
+

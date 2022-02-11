@@ -37,7 +37,7 @@ class Produto:
         return self.__valor
 
     @property
-    def json(self):
+    def json_form(self):
         x = {
             "Produto: ": self.__p_nome,
             "Descrição: ": self.__descricao,

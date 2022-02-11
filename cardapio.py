@@ -11,20 +11,14 @@ class Cardapio:
         """Adiciona produto novo"""
         self.__lista_obj.append(produto)
 
-    def get_lista(self, position):
-        """Retorna item da lista de produtos"""
-        return self.__lista_obj[position]
-
     @property
-    def get_itens_cardapio(self):
-        """Retorna itens do cardápio"""
-        return self.__lista_produto
+    def get_cardapio(self):
+        """Retorna cardápio"""
+        return self.__lista_obj
 
-    def format_produto(self, obj):
-        """Formata o objeto para aparecer no cardápio"""
-        self.__lista_produto.append(obj.json)
-        return self.__lista_produto
-
+    def __repr__(self):
+        """String do cardápio"""
+        return '- '*15, '\nCARDÁPIO\n', f'{self.__lista_obj}', '\n', '- '*15
 
 c = Cardapio()
 p = prod('Feijão', 'Feijoada show de bola', 20)
@@ -32,7 +26,4 @@ c.add_produto(p)
 pr = prod('Macarronada', 'Bem show, alho e óleo', 26)
 c.add_produto(pr)
 
-c.format_produto(p)
-c.format_produto(pr)
-
-print(c.get_itens_cardapio)
+print(c.get_cardapio)

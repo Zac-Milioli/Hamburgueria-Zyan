@@ -13,3 +13,6 @@ class Cliente:
 
     def alterar_des(self, newped):
         self.cli_ped = newped
+
+    def get_cli_nome(self):
+        return self.cli_nome

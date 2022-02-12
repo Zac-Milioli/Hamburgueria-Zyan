@@ -1,13 +1,12 @@
+from cliente import Cliente
 class Pedido:
     def __init__(self):
-        self.lista_pedido = []
+        self.lista_Pedidos = []
+        self.cliente = Cliente()
 
 
+    def add_produto(self, prod):
+        self.lista_Pedidos.append(prod)
 
-    def get_total_pedido(self, cliente):
-        self.lista_pedido.append(cliente)
-
-
-    def add_produto(self, cliente):
-        if cliente:
-            print("Ae caraio ")
+    def mostrar_ped(self):
+        print(self.cliente.get_cli_nome())

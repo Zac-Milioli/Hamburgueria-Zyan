@@ -39,3 +39,8 @@ x_len = len(x)
 
 for i in range(0, x_len):
     print(x[i])
+
+
+    # def __repr__(self):
+    #     """String do cardápio"""
+    #     return '- '*15, '\nCARDÁPIO\n', f'{self.__lista_produto}', '\n', '- '*15

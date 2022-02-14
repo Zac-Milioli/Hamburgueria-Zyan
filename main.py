@@ -8,9 +8,10 @@ cardapio = Cardapio()
 pedido = Pedido()
 
 #instanciamento de itens para o cardápio
+
 NomeProduto = "Hambúrguer"
 PrecoProduto = 18.0
-CodProduto  = 1
+CodProduto = 1
 Prod01 = Produto(NomeProduto, PrecoProduto, CodProduto)
 
 NomeProduto1 = "Hambúrguer"
@@ -36,57 +37,49 @@ cli_cod2 = "212"
 cli_ped2 = "Água"
 cliente2 = Cliente(cli_nome2, cli_cod2, cli_ped2)
 
-
-
-pedido.add_produto(cli_ped)
-pedido.mostrar_ped()
-
-
-
-
-
-
 #Adicionando itens ao cardapio
 
-# cardapio.new_produto(Prod01)
-# cardapio.new_produto(Prod02)
-# cardapio.new_produto(Prod03)
-# cardapio.get_pro()
-#
+cardapio.new_produto(Prod01)
+cardapio.new_produto(Prod02)
+cardapio.new_produto(Prod03)
+cardapio.get_produto()
+
+pedido.add_produto(cli_ped)
+pedido.mostrar_ped(cliente1)
+pedido.mostrar_ped(cliente1)
 
 
-# print("Olá, o que gostaria de fazer:")
+# print("\nOlá, o que gostaria de fazer:")
 # x = int(input("[1] Novo Produto [2] Novo cliente, [3] Novo Pedido: "))
+# i = 0
 # if x == 1:
 #     a = int(input("Quantos itens iremos adicionar ao cardápio: "))
-#     i = 0
 #     while i < a:
 #         nome = input("Produto: ")
 #         preco = float(input("Preço: "))
-#         cod = input("Descrição: ")
+#         cod = input("Codigo: ")
 #         prod = Produto(nome, preco, cod)
 #         cardapio.new_produto(prod)
 #         i += 1
-#         cardapio.get_pro()
+#         cardapio.get_produto()
 # elif x == 2:
-#     b = int(input("Quantos clientes iremos registrar: ")
-#     i = 0
+#     b = int(input("Quantos clientes iremos registrar: "))
 #     while i < b:
-#         cliente_nome = input("Produto: ")
-#         cliente_cod = float(input("Preço: "))
-#         prod = Cliente(cli_nome, cli_cod)
+#         cliente_nome = input("Nome: ")
+#         cliente_cod = float(input("Cod: "))
+#         cliente_pedido = input("Pedido: ")
+#         var = Cliente(cliente_nome, cliente_cod, cliente_pedido)
 #         i += 1
-#
 # elif x == 3:
 #     pedido.add_produto(cliente1)
-#
 # else:
 #     print("ERRO")
 #
 #
+
 # Prod01.alterar_nome(" ")
 # Prod02.alterar_preço(" ")
-# Prod03.alterar_cod(" ")
+# Prod03.alterar_ped(" ")
 # cardapio.get_pro()
 
 

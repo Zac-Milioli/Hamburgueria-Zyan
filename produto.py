@@ -14,6 +14,6 @@ class Produto:
 
 
     def alterar_cod(self, newcod):
-        self.descricao = newcod
-        self.descricao = input("Novo Cod: ")
+        self.codigo = newcod
+        self.codigo = input("Novo Cod: ")
 

@@ -27,3 +27,6 @@ pr = prod('Macarronada', 'Bem show, alho e óleo', 26)
 c.add_produto(pr)
 
 print(c.get_cardapio)
+
+print(p.json_form)
+print(pr.json_form)

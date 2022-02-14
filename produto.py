@@ -44,4 +44,3 @@ class Produto:
             "Valor: ": self.__valor
         }
         return json.dumps(x, indent=3, ensure_ascii=False, separators=('', ' '))
-

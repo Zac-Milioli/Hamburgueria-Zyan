@@ -6,14 +6,10 @@ class Produto:
 
     def alterar_nome (self, newname):
         self.nome = newname
-        self.nome = input("Novo Nome: ")
 
     def alterar_preco (self, newpreco):
         self.preco = newpreco
-        self.preco = input("Novo Preço: ")
-
 
     def alterar_cod(self, newcod):
         self.codigo = newcod
-        self.codigo = input("Novo Cod: ")
 

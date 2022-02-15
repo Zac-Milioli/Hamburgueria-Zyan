@@ -3,54 +3,43 @@ from cardapio import Cardapio
 from pedido import Pedido
 from cliente import Cliente
 
-
 cardapio = Cardapio()
-pedido = Pedido()
+pedido1 = Pedido()
 
 #instanciamento de itens para o cardápio
 
-NomeProduto = "Hambúrguer"
-PrecoProduto = 18.0
-CodProduto = 1
-Prod01 = Produto(NomeProduto, PrecoProduto, CodProduto)
 
-NomeProduto1 = "Hambúrguer"
-PrecoProduto1 = 15.0
-CodProduto1  = 2
-Prod02 = Produto(NomeProduto1, PrecoProduto1, CodProduto1)
+Prod01 = Produto("Hambúrguer-Classico", 18.0, 1)
+Prod02 = Produto("Hambúrguer-de-Siri", 15.0 , 2)
+Prod03 = Produto("Refri", 5.0, 3)
 
-NomeProduto2= "Refri"
-PrecoProduto2= 5.0
-CodProduto2 = 3
-Prod03 = Produto(NomeProduto2, PrecoProduto2, CodProduto2)
+cardapio.add_produto(Prod01)
+cardapio.add_produto(Prod02)
+cardapio.add_produto(Prod03)
 
+cardapio.print_produto()
 
 #instanciamento de clientes
 
 cli_nome = "Ryan"
 cli_cod = "123"
-cli_ped = "Refri"
-cliente1 = Cliente(cli_nome, cli_cod, cli_ped)
+cli_ped = "Hambúrguer-de-Siri"
 
-cli_nome2 = "Zac"
-cli_cod2 = "212"
-cli_ped2 = "Água"
-cliente2 = Cliente(cli_nome2, cli_cod2, cli_ped2)
+pedido1.add_produto(cli_ped)
+cliente1 = Cliente(cli_nome, cli_cod, pedido1)
 
-#Adicionando itens ao cardapio
+# cli_nome2 = "Zac"
+# cli_cod2 = "212"
+# cli_ped2 = "Água"
+# cliente2 = Cliente(cli_nome2, cli_cod2, cli_ped2)
 
-cardapio.new_produto(Prod01)
-cardapio.new_produto(Prod02)
-cardapio.new_produto(Prod03)
-cardapio.get_produto()
 
-pedido.add_produto(cli_ped)
-pedido.mostrar_ped(cliente1)
-pedido.mostrar_ped(cliente1)
+cliente_pedido = cliente1.get_cliente_pedido()
+cliente_pedido.mostrar_ped(cardapio)
 
 
 # print("\nOlá, o que gostaria de fazer:")
-# x = int(input("[1] Novo Produto [2] Novo cliente, [3] Novo Pedido: "))
+# x = int(input("[1] Novo Produto [2] Novo cliente: "))
 # i = 0
 # if x == 1:
 #     a = int(input("Quantos itens iremos adicionar ao cardápio: "))

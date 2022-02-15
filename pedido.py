@@ -1,15 +1,17 @@
 from cliente import Cliente
-from cardapio import Cardapio
 class Pedido:
     def __init__(self):
         self.lista_Pedidos = []
         self.cliente = Cliente
-        self.cardapio = Cardapio()
+
+    def get_produtos(self):
+        return self.lista_Pedidos
 
     def add_produto(self, pedido):
         self.lista_Pedidos.append(pedido)
 
-    def mostrar_ped(self, cliente):
-        self.cliente.get_cli_nome(cliente)
-        if self.lista_Pedidos == self.cardapio.nomes:
-            print("")
+    def mostrar_ped(self, cardapio):
+        if cardapio.get_name(self.lista_Pedidos[0]):
+            print("Caldo de Cana com Pastel")
+        else:
+            print("Não deu")

@@ -3,6 +3,7 @@ class Cardapio:
         self.produtos = []
 
     def add_produto(self, produto):
+        """Adiciona produto a lista de produtos de cardapio"""
         self.produtos.append(produto)
         return self.produtos
 

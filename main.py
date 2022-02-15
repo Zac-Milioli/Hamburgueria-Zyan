@@ -28,7 +28,7 @@ cardapio.print_produtos()
 def main():
     print(20 * " _ ")
     print("\nOlá, o que gostaria de fazer:")
-    x = int(input("[-1] Sair \n[0] Ver cardápio \n[1] Novo Produto: \n[2] Novo cliente:\n [3] Ver Clientes "))
+    x = int(input("[-1] Sair \n[0] Ver cardápio \n[1] Novo Produto: \n[2] Novo cliente:\n[3] Ver Clientes: "))
     print(20 * " _ ")
     menu(x)
 

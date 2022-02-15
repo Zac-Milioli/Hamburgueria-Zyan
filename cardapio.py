@@ -9,14 +9,14 @@ class Cardapio:
     def get_name(self, name):
         for produto in self.produtos:
             if produto.nome == name:
-                return True
+                return produto
         return False
 
     def print_produto(self):
         print(20*"_")
         print("CARDÁPIO")
         for produto in self.produtos:
-            print("Nome:",produto.nome,",Preço:", produto.preco, ",Codigo:", produto.codigo)
+            print("Nome:",produto.nome,",Preço: R$", produto.preco, ",Codigo:", produto.codigo)
         print(20*"_")
 
 

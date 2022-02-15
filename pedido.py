@@ -1,4 +1,5 @@
 from cliente import Cliente
+
 class Pedido:
     def __init__(self):
         self.lista_Pedidos = []
@@ -12,6 +13,6 @@ class Pedido:
 
     def mostrar_ped(self, cardapio):
         if cardapio.get_name(self.lista_Pedidos[0]):
-            print("Caldo de Cana com Pastel")
+            print("Pedido executado com Sucesso")
         else:
-            print("Não deu")
+            print("ERRO:Não possuímos este Produto no Momento")

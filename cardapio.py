@@ -12,11 +12,9 @@ class Cardapio:
                 return produto
         return False
 
-    def print_produto(self):
-        print(20*"_")
+    def print_produtos(self):
         print("CARDÁPIO")
         for produto in self.produtos:
             print("Nome:",produto.nome,",Preço: R$", produto.preco, ",Codigo:", produto.codigo)
-        print(20*"_")
 
 

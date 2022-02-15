@@ -1,5 +1,4 @@
 from cliente import Cliente
-
 class Pedido:
     def __init__(self):
         self.lista_Pedidos = []
@@ -8,11 +7,15 @@ class Pedido:
     def get_produtos(self):
         return self.lista_Pedidos
 
-    def add_produto(self, pedido):
-        self.lista_Pedidos.append(pedido)
+    def exist_in_cardapio(self, produto, cardapio):
+        if cardapio.get_name(produto):
+            return True
+        return False
 
-    def mostrar_ped(self, cardapio):
-        if cardapio.get_name(self.lista_Pedidos[0]):
-            print("Pedido executado com Sucesso")
+    def add_produto(self, pedido, cardapio):
+        if self.exist_in_cardapio(pedido, cardapio):
+            self.lista_Pedidos.append(pedido)
+            print("Pedido cadastrado com Sucesso")
         else:
-            print("ERRO:Não possuímos este Produto no Momento")
+            print('\033[91m' + 'ERRO: Produto não consta em cardápio' + '\033[0m')
+

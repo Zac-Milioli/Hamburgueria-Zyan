@@ -36,11 +36,5 @@ class Produto:
         self.__valor = valor
         return self.__valor
 
-    @property
-    def json_form(self):
-        x = {
-            "Produto: ": self.__p_nome,
-            "Descrição: ": self.__descricao,
-            "Valor: ": self.__valor
-        }
-        return json.dumps(x, indent=3, ensure_ascii=False, separators=('', ' '))
+    def __repr__(self):
+        return f'Produto - {self.__p_nome}\tR${self.__valor},00\nDescrição: {self.__descricao}\n'

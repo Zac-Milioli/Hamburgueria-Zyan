@@ -1,8 +1,8 @@
-from produto import Produto
+from produto import Produto as prod
 from mesa import Mesa
-from cliente import Cliente
-from pedido import Pedido
-from cardapio import Cardapio
+from cliente import Cliente as cli
+from pedido import Pedido as ped
+from cardapio import Cardapio as card
 import json
 
 
@@ -41,6 +41,6 @@ for i in range(0, x_len):
     print(x[i])
 
 
-    # def __repr__(self):
+    # def __repr__(Cardapio):
     #     """String do cardápio"""
     #     return '- '*15, '\nCARDÁPIO\n', f'{self.__lista_produto}', '\n', '- '*15

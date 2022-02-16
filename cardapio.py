@@ -28,4 +28,3 @@ print('- '*15, '\nCARDÁPIO\n')
 for produto in c.get_cardapio:
     print(produto)
 print('- '*15)
-

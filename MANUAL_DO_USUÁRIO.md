@@ -1,4 +1,5 @@
 #MANUAL DO USUÁRIO
+
 Olá, este é um manual básico direcionado ao usuário deste sistema básico.
 
 Todas as ações devem ser feitas diretamente dentro da área delimitada e nomeada como "ÁREA DO USUÁRIO",

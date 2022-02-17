@@ -3,6 +3,8 @@ from cliente import Cliente
 from cardapio import Cardapio
 
 
+print('\nRESTAURANTE ZYAN\n')
+
 def exibir_cardapio():
     print('\n\t\t\t\tCARDÁPIO')
     print('- ' * 40)

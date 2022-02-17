@@ -7,9 +7,9 @@ para conservar a integridade dos objetos e funções, pois esses estão perfeita
 O programa também pode ser executado via console.
 
 
-FORMAS DE USO:
+# Formas de uso:
 
-° Para adicionar um produto ao cardápio:
+* Para adicionar um produto ao cardápio:
 
     Na ÁREA DO USUÁRIO, crie um objeto utilizando o seguinte formato
 
@@ -25,31 +25,31 @@ FORMAS DE USO:
         c.add_produto(objeto_produto)
 
 
-° Para exibir o cardápio:
+* Para exibir o cardápio:
 
     Dentro da ÁREA DO USUÁRIO, após criar e adicionar seus próprios produtos ao cardápio, digite o seguinte comando:
 
         exibir_cardapio()
 
 
-° Para adicionar um cliente:
+* Para adicionar um cliente:
 
     Deve ser instanciado um objeto Cliente, então utilize o seguinte formato:
 
         objeto_cliente = Cliente('nome', código_numérico, 'número_da_mesa')
 
 
-° Para adicionar pedidos ao cliente:
+* Para adicionar pedidos ao cliente:
 
     Utilize o seguinte comando:
 
         objeto_cliente.add_pedido(objeto_produto)
 
 
-° Para exibir a comanda atual do cliente:
+* Para exibir a comanda atual do cliente:
 
     get_comanda(objeto_cliente)
 
 
-**Os outros comandos (getters e setters) são reservados aos desenvolvedores, mas seu acesso é fácil, bastando usar
+> Os outros comandos (getters e setters) são reservados aos desenvolvedores, mas seu acesso é fácil, bastando usar
 o nome do atributo que busca alterar (colocando a alteração) ou exibir (utilizando print() junto à função).

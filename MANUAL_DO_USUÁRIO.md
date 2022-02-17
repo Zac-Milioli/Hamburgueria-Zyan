@@ -1,4 +1,4 @@
-#MANUAL DO USUÁRIO
+# MANUAL DO USUÁRIO
 
 Olá, este é um manual básico direcionado ao usuário deste sistema.
 

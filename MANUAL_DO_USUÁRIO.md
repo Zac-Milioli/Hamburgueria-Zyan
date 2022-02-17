@@ -1,6 +1,6 @@
 #MANUAL DO USUÁRIO
 
-Olá, este é um manual básico direcionado ao usuário deste sistema básico.
+Olá, este é um manual básico direcionado ao usuário deste sistema.
 
 Todas as ações devem ser feitas diretamente dentro da área delimitada e nomeada como "ÁREA DO USUÁRIO",
 para conservar a integridade dos objetos e funções, pois esses estão perfeitamente funcionais.

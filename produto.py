@@ -1,5 +1,3 @@
-import json
-
 class Produto:
     def __init__(self, p_nome, descricao, valor):
         self.__p_nome = p_nome
@@ -37,4 +35,4 @@ class Produto:
         return self.__valor
 
     def __repr__(self):
-        return f'Produto - {self.__p_nome}\tR${self.__valor},00\nDescrição: {self.__descricao}\n'
+        return f'\n-> {self.__p_nome}\nR${self.__valor},00\n{self.__descricao}\n'

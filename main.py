@@ -1,46 +1,26 @@
-from produto import Produto as prod
-from mesa import Mesa
-from cliente import Cliente as cli
-from pedido import Pedido as ped
-from cardapio import Cardapio as card
-import json
+from produto import Produto
+from cliente import Cliente
+from cardapio import Cardapio
 
 
-x = []
-
-c1 = Cliente('Ricardo', 4554)
-c2 = Cliente('Marcos', 3216)
-
-m1 = Mesa(12)
-m2 = Mesa(15)
-
-print(c1.get_nome)
-print(c2.get_nome)
-print(c1.get_cod)
-print(c2.get_cod)
-print(m1.get_numero)
-print(m2.get_numero)
-
-c1.set_nome('João')
-c1.set_cod(5824)
-c2.set_nome('Cleber')
-m1.set_numero(16)
-
-print('- '*10)
-print('Dados alterados e formatados')
-print('- '*10)
-
-x.append(repr(c1))
-x.append(repr(c2))
-x.append(repr(m1))
-x.append(repr(m2))
-
-x_len = len(x)
-
-for i in range(0, x_len):
-    print(x[i])
+def exibir_cardapio():
+    print('\nCARDÁPIO')
+    print('- '*8)
+    for itens in c.get_cardapio:
+        print(itens)
+    print('- ' * 8)
 
 
-    # def __repr__(Cardapio):
-    #     """String do cardápio"""
-    #     return '- '*15, '\nCARDÁPIO\n', f'{self.__lista_produto}', '\n', '- '*15
+c = Cardapio()
+
+c1 = Cliente('Ricardo', 4554, '10')
+c2 = Cliente('Marcos', 3216, '06')
+d = 'Delicioso macarrão, feito com massa caseira, coberto com nosso molho de creme de leite e ovos.'
+p1 = Produto('Macarrão ao Molho Branco', d, 32)
+d = 'Frango orgânico, com uma crocante crosta, feito em air-fryer, banhado em molho de tomate. Acompanha arroz.'
+p2 = Produto('Frango à Parmegiana', d, 35)
+c.add_produto(p1)
+c.add_produto(p2)
+
+exibir_clientes()
+exibir_cardapio()

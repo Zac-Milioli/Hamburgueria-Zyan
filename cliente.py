@@ -52,4 +52,4 @@ class Cliente:
         return self.__pedido
 
     def __repr__(self):
-        return f'Cliente: {self.__nome}\nCódigo: {self.__cod}\nMesa: {self.__mesa}'
+        return f'\nCliente: {self.__nome}\nCódigo: {self.__cod}\nMesa: {self.__mesa}\nTotal: {self.__total}\n'

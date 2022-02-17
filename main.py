@@ -4,11 +4,20 @@ from cardapio import Cardapio
 
 
 def exibir_cardapio():
-    print('\nCARDÁPIO')
-    print('- '*8)
+    print('\n\t\t\t\tCARDÁPIO')
+    print('- ' * 40)
     for itens in c.get_cardapio:
         print(itens)
-    print('- ' * 8)
+    print('- ' * 40)
+
+def get_comanda(pessoa):
+    print('- ' * 40)
+    print('\n\t\t\t\tCOMANDA')
+    print(pessoa)
+    print('\nPEDIDOS:')
+    for itens in pessoa.get_pedido:
+        print(itens)
+    print('- ' * 40)
 
 
 c = Cardapio()
@@ -22,5 +31,6 @@ p2 = Produto('Frango à Parmegiana', d, 35)
 c.add_produto(p1)
 c.add_produto(p2)
 
-exibir_clientes()
 exibir_cardapio()
+c1.add_pedido(p1)
+get_comanda(c1)

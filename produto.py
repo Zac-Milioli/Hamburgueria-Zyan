@@ -35,4 +35,4 @@ class Produto:
         return self.__valor
 
     def __repr__(self):
-        return f'\n-> {self.__p_nome}\nR${self.__valor},00\n{self.__descricao}\n'
+        return f'\n\t\t\t-> {self.__p_nome}\n\t\t\t\tR${self.__valor},00\n{self.__descricao}\n'

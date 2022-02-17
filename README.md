@@ -1,2 +1,2 @@
 # Hamburgueria-Zyan
-Código que simula o sistema de uma hamburgueria. Desenvolvido por Zac e Ryan para um trabalho de faculdade.
+Código que simula o sistema de um restaurante. Desenvolvido por Zac e Ryan para um trabalho de faculdade.

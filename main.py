@@ -14,7 +14,7 @@ def get_comanda(pessoa):
     print('- ' * 40)
     print('\n\t\t\t\tCOMANDA')
     print(pessoa)
-    print('\nPEDIDOS:')
+    print('\n\tPEDIDOS:')
     for itens in pessoa.get_pedido:
         print(itens)
     print('- ' * 40)

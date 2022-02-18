@@ -48,7 +48,7 @@ O programa também pode ser executado via console.
 
 * Para exibir a comanda atual do cliente:
 
-    get_comanda(objeto_cliente)
+      get_comanda(objeto_cliente)
 
 
 > Os outros comandos (getters e setters) são reservados aos desenvolvedores, mas seu acesso é fácil, bastando usar

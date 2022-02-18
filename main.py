@@ -6,6 +6,7 @@ from cardapio import Cardapio
 print('\nRESTAURANTE ZYAN\n')
 
 def exibir_cardapio():
+    """Retorna o cardápio formatado e com todos os produtos"""
     print('\n\t\t\t\tCARDÁPIO')
     print('- ' * 40)
     for itens in c.get_cardapio:
@@ -13,6 +14,7 @@ def exibir_cardapio():
     print('- ' * 40)
 
 def get_comanda(pessoa):
+    """Retorna a comanda formatada de um cliente específico"""
     print('- ' * 40)
     print('\n\t\t\t\tCOMANDA')
     print(pessoa)

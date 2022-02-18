@@ -1,6 +1,7 @@
 class Cardapio:
     def __init__(self):
         self.__lista_produto = []
+        """Lista com os objetos produto"""
 
     def add_produto(self, produto):
         """Adiciona produto novo"""

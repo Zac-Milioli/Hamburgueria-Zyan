@@ -1,10 +1,15 @@
 class Cliente:
     def __init__(self, nome, cod, mesa):
         self.__nome = nome
+        """Nome do cliente"""
         self.__cod = cod
+        """Código do cliente (inteiro)"""
         self.__mesa = mesa
+        """Mesa do cliente"""
         self.__total = 0
+        """Valor gasto pelo cliente (default = 0)"""
         self.__pedido = []
+        """Lista com os objetos produto dentro do consumo do cliente"""
 
     @property
     def get_nome(self):

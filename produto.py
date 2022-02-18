@@ -1,8 +1,11 @@
 class Produto:
     def __init__(self, p_nome, descricao, valor):
         self.__p_nome = p_nome
+        """Nome do produto"""
         self.__descricao = descricao
+        """Descrição do produto"""
         self.__valor = valor
+        """Valor do produto (inteiro)"""
 
     @property
     def get_p_nome(self):

@@ -1,106 +1,122 @@
+#Importamos as classes necessárias.
 import sys
 from produto import Produto
 from cardapio import Cardapio
 from pedido import Pedido
 from cliente import Cliente
-import pickle
 
+
+#DECLARAMOS  A CLASSE CARDAPIO.
 cardapio = Cardapio()
-lista_cliente = []
+
+#instanciamento de produtos para o nosso cardápio.
+
+Prod01 = Produto("Hambúrguer-Classico", 18.0, 122)
+Prod02 = Produto("Hambúrguer-de-Siri", 15.0, 234)
+Prod03 = Produto("Hambúrguer-de-Frango", 14.0, 312)
+Prod04 = Produto("Refri", 5.0, 221)
+Prod05 = Produto("Água", 4.0, 100)
+
+#Adicionamos estes itens a classe cardapio.
+
+#Podemos alterar informaçõs já existentes com as funções de .alterar da Classe Produto.
+Prod05.alterar_nome("Água-com-Gás")
+Prod03.alterar_cod(316)
+Prod01.alterar_preco(18.5)
 
 
-#instanciamento de itens para o cardápio
-
-Prod01 = Produto("Hambúrguer-Classico", 18.0, 1)
-Prod02 = Produto("Hambúrguer-de-Siri", 15.0 , 2)
-Prod03 = Produto("Hambúrguer-de-Frango", 14.0 , 3)
-Prod04 = Produto("Refri", 5.0, 3)
-Prod05 = Produto("Água", 4.0, 4)
 cardapio.add_produto(Prod01)
 cardapio.add_produto(Prod02)
 cardapio.add_produto(Prod03)
 cardapio.add_produto(Prod04)
 cardapio.add_produto(Prod05)
+
+#Printamos os itens que existem em cardápio.
+
 print(20 * " _ ")
 cardapio.print_produtos()
 
+#Criação de uma Def main para criação de  um loop infinito.
 
 def main():
-    print(20 * " _ ")
+
+#Def main printa as opções do sistema e guarda a informação na variavel X.
+
     print("\nOlá, o que gostaria de fazer:")
-    x = int(input("[-1] Sair \n[0] Ver cardápio \n[1] Novo Produto: \n[2] Novo cliente:\n[3] Ver Clientes: "))
+    x = int(input("[0] Sair \n[1] Ver cardápio \n[2] Novo Produto: \n[3] Novo cliente:\n"))
     print(20 * " _ ")
+
+#Vamos para def menu levando a variavel X com  o valor desejado.
+
     menu(x)
 
 def menu(x):
-    if x == -1:
-        salve_cliente()
+#def menu usa a variavel X que pegamos de def main e nos leva para a função desejada em nosso sistema.
+    if x == 0:
+        #Caso  a variavel x = 0, o sistema e o loop irá se encerrar.
         sys.exit()
-    elif x == 0:
-        cardapio.print_produtos()
     elif x == 1:
-        novo_produto()
+        # Caso  a variavel x = 1, os itens irão aparecer no console.
+        cardapio.print_produtos()
     elif x == 2:
-        novo_cliente()
+        # Caso  a variavel x = 2, iremos para a def novo_produto().
+        novo_produto()
     elif x == 3:
-        for cliente in lista_cliente:
-            print("nome: " + cliente.cli_nome)
+        # Caso  a variavel x = 4, iremos para a def novo_cliente().
+        novo_cliente()
     else:
+# Caso  a variavel x =  N, teremos uma mensagem de erro e seremos levados de volta para a def main.
         print('\033[91m' + 'ERRO: Comando inválido' + '\033[0m')
     main()
 
+
 def novo_produto():
+#Def para registrarmos novos produtos ao nosso cardápio.
+
     i = 0
     a = int(input("Quantos itens iremos adicionar ao cardápio: "))
+
+#Loop para pegarmos mais de 1 item por vez.
     while i < a:
+
+#Registramos os itens novos com um input.
         nome = input("Produto: ")
         preco = float(input("Preço: "))
         cod = input("Codigo: ")
         prod = Produto(nome, preco, cod)
+
+#Item adicionado ao cardápio
         cardapio.add_produto(prod)
         i += 1
         print(20 * " _ ")
+#Voltamos a def main a partir daqui.
+
 def novo_cliente():
+    #Def para registramos novos clientes e pedidos.
+
     i = 0
     b = int(input("Quantos clientes iremos registrar: "))
+
+#Novamente faremos um loop para termos mais de 1 cliente.
     while i < b:
+
+#Declaremos a Classe Pedido.
         pedido = Pedido()
+
+#Registramos os clientes com um input().
         cliente_nome = input("Nome: ")
         cliente_cod = float(input("Cod: "))
         cliente_pedido = input("Pedido: ")
 
+#Usaremos a função de Pedido add_produto() para o pedido do cliente e o cardapio existente no momento.
         pedido.add_produto(cliente_pedido, cardapio)
-        novo_cliente = Cliente(cliente_nome, cliente_cod, pedido)
-        lista_cliente.append(novo_cliente)
+
+#instanciamento do objeto cliente com as informaçõs inseridas na classe Pedido.
+        Cliente(cliente_nome, cliente_cod, pedido)
+
+#Função para printarmos o pedido registrado.
+        pedido.print_pedidos
         i += 1
         print(20 * " _ ")
-
-def salve_cliente():
-    #Obj = Dic
-    save_cliente = []
-    for cliente in lista_cliente:
-        lista_produtos = []
-        for produto in cliente.cliente_pedido.get_produtos():
-            lista_produtos.append(produto)
-        save_cliente.append({"nome": cliente.cli_nome, "cod": cliente.cli_cod, "lista": lista_produtos})
-    arquivo = open("clientes.pkl", "wb")
-#Escrever = WriteB
-    pickle.dump(save_cliente, arquivo)
-    arquivo.close()
-
-
-#ler  = Read
-def puxar_clientes():
-    #Dic = obj
-    arquivo1 = open("clientes.pkl", "rb")
-
-    lista_salva = pickle.load(arquivo1)
-    for cliente in lista_salva:
-        pedido_salvo = Pedido()
-        for produto in cliente["lista"]:
-            pedido_salvo.add_produto(produto, cardapio)
-        cli = Cliente(cliente["nome"], cliente["cod"], pedido_salvo)
-        lista_cliente.append(cli)
-
-puxar_clientes()
+#Voltamos a def main a partir daqui.
 main()

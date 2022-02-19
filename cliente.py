@@ -1,5 +1,6 @@
 class Cliente:
     def __init__(self, nome, cod, mesa):
+        """Objeto cliente, contendo nome, código e mesa"""
         self.__nome = nome
         """Nome do cliente"""
         self.__cod = cod

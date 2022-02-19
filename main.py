@@ -75,4 +75,10 @@ c1.delete_pedido(p2)
 get_comanda(c1)
 input('\nPressione ENTER para continuar...')
 os.system('cls')
+
+c.delete_produto(p3)
+
+exibir_cardapio()
+input('\nPressione ENTER para continuar...')
+os.system('cls')
 #########################

@@ -1,5 +1,6 @@
 class Produto:
     def __init__(self, p_nome, descricao, valor):
+        """Objeto produto, contendo nome, descrição e valor"""
         self.__p_nome = p_nome
         """Nome do produto"""
         self.__descricao = descricao

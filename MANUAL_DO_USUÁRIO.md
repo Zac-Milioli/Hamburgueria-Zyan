@@ -24,6 +24,10 @@ O programa também pode ser executado via console.
 
         c.add_produto(objeto_produto)
 
+* Para REMOVER UM ITEM do cardápio:
+    Digite o seguinte comando:
+        
+        c.delete_produto(objeto_produto)
 
 * Para EXIBIR CARDÁPIO:
 

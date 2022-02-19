@@ -51,6 +51,11 @@ class Cliente:
         self.__pedido.append(produto)
         self.__total += produto.get_valor
 
+    def delete_pedido(self, produto):
+        """Deleta um pedido do cliente"""
+        self.__pedido.remove(produto)
+        self.__total -= produto.get_valor
+
     @property
     def get_pedido(self):
         """"Retorna o pedido do cliente"""

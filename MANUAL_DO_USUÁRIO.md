@@ -9,9 +9,9 @@ O programa também pode ser executado via console.
 
 # Formas de uso:
 
-* Para adicionar um produto ao cardápio:
+* Para ADICIONAR UM PRODUTO ao cardápio:
 
-    Na ÁREA DO USUÁRIO, crie um objeto utilizando o seguinte formato
+    Na Área do Usuário, crie um objeto utilizando o seguinte formato
 
         objeto_produto = p('nome', 'descrição', valor)
 
@@ -25,28 +25,32 @@ O programa também pode ser executado via console.
         c.add_produto(objeto_produto)
 
 
-* Para exibir o cardápio:
+* Para EXIBIR CARDÁPIO:
 
     Dentro da ÁREA DO USUÁRIO, após criar e adicionar seus próprios produtos ao cardápio, digite o seguinte comando:
 
         exibir_cardapio()
 
 
-* Para adicionar um cliente:
+* Para ADICIONAR UM CLIENTE:
 
     Deve ser instanciado um objeto Cliente, então utilize o seguinte formato:
 
         objeto_cliente = Cliente('nome', código_numérico, 'número_da_mesa')
 
 
-* Para adicionar pedidos ao cliente:
+* Para ADICIONAR PEDIDOS AO CLIENTE:
 
     Utilize o seguinte comando:
 
         objeto_cliente.add_pedido(objeto_produto)
 
+* Para DELETAR PEDIDOS de um cliente:
+    Utilize o seguinte comando:
+        
+        objeto_cliente.delete_pedido(objeto_produto)
 
-* Para exibir a comanda atual do cliente:
+* Para EXIBIR A COMANDA atual do cliente:
 
       get_comanda(objeto_cliente)
 
